@@ -1,7 +1,10 @@
 {
     "extends": ["airbnb", "airbnb/hooks"],
     "globals": {
-        "document": true
+        "document": true,
+        "describe": true,
+        "it": true,
+        "expect": true
     },
     "rules": {
         "indent": [
@@ -27,6 +30,7 @@
         "comma-dangle": [
             "error",
             "never"
-        ]
+        ],
+        "max-len": [2, 150]
     }
 }

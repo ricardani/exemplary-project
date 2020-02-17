@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component render should render correctly 1`] = `
+<div
+  className="app"
+>
+  Hello World!!!!
+</div>
+`;
