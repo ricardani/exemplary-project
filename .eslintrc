@@ -7,30 +7,10 @@
         "expect": true
     },
     "rules": {
-        "indent": [
-            2,
-            4,
-            {
-                "SwitchCase": 1
-            }
-        ],
-        "react/jsx-indent": [
-            "error",
-            4
-        ],
-        "react/jsx-filename-extension": [
-            1,
-            {
-                "extensions": [
-                    ".js",
-                    ".jsx"
-                ]
-            }
-        ],
-        "comma-dangle": [
-            "error",
-            "never"
-        ],
-        "max-len": [2, 150]
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+        "comma-dangle": ["error", "never"],
+        "max-len": ["error", 150]
     }
 }
