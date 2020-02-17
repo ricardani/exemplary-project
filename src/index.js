@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-unresolved
 import { render } from 'react-dom';
 import { hot } from 'react-hot-loader/root';
 
