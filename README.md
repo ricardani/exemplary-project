@@ -4,8 +4,6 @@
 
 This will be my attempt to have a single project where I can add every development tool I think it should be necessary in a frontend project.
 
-This project will also be used as a guinea pig for when I need to try some new tool.
-
 ## Table of Contents
 
 * [Webpack](#webpack)
