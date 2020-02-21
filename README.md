@@ -10,7 +10,7 @@ This project will also be used as a guinea pig for when I need to try some new t
 
 * [Webpack](#webpack)
 * [Linting](#linting)
-* [Jest](#jest)
+* [Unit Testing](#unit-testing)
 
 ### Webpack
 
@@ -47,7 +47,7 @@ devServer: {
 
 You can check my full configuration [here](https://github.com/ricardani/exemplary-project/tree/master/tools/webpack).
 
-## Linting
+### Linting
 
 Linting lets you analyse your code for programatic or styling erros (e.g. unused variable or missing indentation).
 One of the benefits of using linters is keeping the style of the code consistent. This is really useful when you work in teams because it enforces a styling standard for everyone and, consequently, it will improve the maintainability of the project because it's easier to read.
@@ -71,4 +71,45 @@ One rule that I always change is the `indent` one. The `airbnb` rules set it to 
 
 You can check my full configuration for javascript [here](https://github.com/ricardani/exemplary-project/blob/master/.eslintrc) and for sass [here](https://github.com/ricardani/exemplary-project/blob/master/.stylelintrc)
 
-## Jest
+### Unit Testing
+
+Unit testing is a type of test that focus on a single unit of code.
+This unit refers to smallest block of testable code in your application.
+
+This testing method is useful to keep your application consistent by defining test cases that will guarantee effectiveness of your current code and that future development don't change the previous behaviour.
+
+In this project I will be using [Jest](https://github.com/facebook/jest) as my unit testing tool.
+
+#### Examples
+
+This is a small example to test the sum of two values
+```js
+describe('Sum test', () => {
+    it('should return the correct sum', () => {
+        expect(2 + 2).toEqual(4);
+    });
+});
+```
+
+Jest allows you to do snapshot testing.
+This means, for example, if you want to test the result of a rendered component you can do it like this:
+```js
+describe('Render', () => {
+    it('should render correctly', () => {
+        expect(enzyme.shallow(<App />)).toMatchSnapshot();
+    });
+});
+```
+
+One thing you need to take into consideration while writing unit tests is to mock your dependencies.
+This will help you focus on the block of code you are testing without worrying about what the dependencies will do.
+```js
+// Mocks everything from awesome-util file
+jest.mock('../utils/awesome-util');
+ 
+// Only mocks the methodA from awesome-util file
+jest.mock('../utils/awesome-util', () => ({
+    ...jest.requireActual('../utils/awesome-file'),
+    methodA: jest.fn().mockReturnValue(true) //Returns true every time it's called
+}));
+```
