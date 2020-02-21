@@ -1,6 +1,6 @@
 # Exemplary Project
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/ricardani/exemplary-project/blob/master/LICENSE)
-[![Unit Tests](https://github.com/ricardani/examplary-project/workflows/Running%20Unit%20Tests/badge.svg)](https://github.com/ricardani/exemplary-project/actions)
+[![Unit Tests](https://github.com/ricardani/exemplary-project/workflows/Unit%20Tests/badge.svg)](https://github.com/ricardani/exemplary-project/actions)
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fricardani%2Fexemplary-project%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/ricardani/exemplary-project/master)
 
 This will be my attempt to have a single project where I can add every development tool I think it should be necessary in a frontend project.
