@@ -2,6 +2,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/ricardani/exemplary-project/blob/master/LICENSE)
 [![](https://github.com/ricardani/exemplary-project/workflows/Unit%20Tests/badge.svg)](https://github.com/ricardani/exemplary-project/actions)
 [![](https://github.com/ricardani/exemplary-project/workflows/Lint/badge.svg)](https://github.com/ricardani/exemplary-project/actions)
+[![](https://github.com/ricardani/exemplary-project/workflows/Mutation%20Tests/badge.svg)](https://github.com/ricardani/exemplary-project/actions)
 
 This will be my attempt to have a single project where I can add every development tool I think it should be necessary in a frontend project.
 
