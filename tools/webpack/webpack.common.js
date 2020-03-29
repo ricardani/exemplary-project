@@ -1,11 +1,12 @@
+/* eslint import/no-extraneous-dependencies:0 */
 const path = require('path');
-const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const rootDir = path.resolve(__dirname, '../..');
 
 module.exports = {
     entry: ['react-hot-loader/patch', './src/index.js'],
-    mode: 'development',
     module: {
         rules: [
             {
@@ -27,16 +28,13 @@ module.exports = {
         }
     },
     output: {
-        path: path.join(rootDir, 'dist/'),
-        publicPath: '/dist/',
-        filename: 'bundle.js'
+        path: path.join(rootDir, 'dist'),
+        filename: 'scripts/bundle.js'
     },
-    devServer: {
-        contentBase: path.join(rootDir, 'public/'),
-        port: 3000,
-        publicPath: '/dist/',
-        hotOnly: true,
-        clientLogLevel: 'silent'
-    },
-    plugins: [new webpack.HotModuleReplacementPlugin()]
+    plugins: [
+        new CleanWebpackPlugin(),
+        new CopyPlugin([
+            { from: './public' }
+        ])
+    ]
 };

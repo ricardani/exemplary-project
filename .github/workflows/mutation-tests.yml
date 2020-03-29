@@ -6,8 +6,7 @@ on:
     - master
 
 jobs:
-  unit:
-
+  mutation:
     runs-on: ubuntu-latest 
 
     strategy:
