@@ -7,6 +7,11 @@
 # tests
 /reports
 
+# mutation temporary config
+/.stryker-tmp
+stryker.conf.diff.js
+stryker.log
+
 # misc
 /.idea
 

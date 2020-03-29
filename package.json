@@ -3,7 +3,8 @@
     "version": "0.2.0",
     "description": "An attempt to do an exemplary project",
     "scripts": {
-        "start": "sh ./tools/scripts/start.sh",
+        "start": "webpack-dev-server --progress --config tools/webpack/webpack.dev.js",
+        "build": "webpack --config tools/webpack/webpack.prod.js",
         "lint": "sh ./tools/scripts/lint.sh",
         "test:unit": "jest --config tools/jest/jest.config.js",
         "test:unit-watch": "jest --config tools/jest/jest.config.js --watchAll",
@@ -30,6 +31,8 @@
         "@stryker-mutator/javascript-mutator": "^3.0.2",
         "@stryker-mutator/jest-runner": "^3.0.2",
         "babel-loader": "^8.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^5.1.1",
         "css-loader": "^3.4.2",
         "enzyme": "^3.11.0",
         "enzyme-adapter-react-16": "^1.15.2",
@@ -49,6 +52,7 @@
         "stylelint-config-sass-guidelines": "^7.0.0",
         "webpack": "^4.42.1",
         "webpack-cli": "^3.3.11",
-        "webpack-dev-server": "^3.10.3"
+        "webpack-dev-server": "^3.10.3",
+        "webpack-merge": "^4.2.2"
     }
 }
