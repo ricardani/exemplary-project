@@ -4,7 +4,6 @@ const merge = require('webpack-merge');
 const webpack = require('webpack');
 
 const common = require('./webpack.common.js');
-
 const rootDir = path.resolve(__dirname, '../..');
 
 module.exports = merge(common, {
